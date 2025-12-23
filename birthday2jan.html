@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Behen 🎂</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffe4f2, #fff7fb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: #ffffffdd;
+      width: 90%;
+      max-width: 420px;
+      padding: 28px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 25px 45px rgba(0,0,0,0.12);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #ff4d88;
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+    }
+
+    .cake {
+      font-size: 5rem;
+      margin: 10px 0 15px;
+      animation: pop 1.2s ease;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #ff4d88;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e63e73;
+      transform: scale(1.05);
+    }
+
+    .surprise {
+      display: none;
+      margin-top: 18px;
+      padding: 14px;
+      background: #fff0f7;
+      border-radius: 15px;
+      font-weight: 600;
+      color: #ff4d88;
+      line-height: 1.5;
+      animation: pop 0.6s ease;
+    }
+
+    footer {
+      margin-top: 16px;
+      font-size: 0.75rem;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.6); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .heart {
+      position: absolute;
+      animation: floatUp 6s linear infinite;
+      color: #ff4d88;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>HAPPY BIRTHDAY BEHEN 🎂</h1>
+
+    <div class="cake">🎂</div>
+
+    <p>
+      Thank you for being with me ❤️ and for talking with a boring person like me 😘  
+      and for sharing your laughs with me!!! 😁  
+      May your life be filled with joy and success ✨  
+      <br><br>
+      Maybe not always in your happiness,  
+      but I promise to stand with you in your sad phase 😄  
+      <br><br>
+      Once again, HAPPY BIRTHDAY my little sis  
+      (MOTUUU!!!) 💕
+    </p>
+
+    <button onclick="showSurprise()">Click for Surprise 🎁</button>
+
+    <div class="surprise" id="surprise">
+      AND I HOPE YOU WILL BE THE FIRST ONE TO TEXT ME 💬  
+      AND TALK WITH ME FOR HOURS ❤️😄
+    </div>
+
+    <footer>Made with ❤️ by your brother</footer>
+  </div>
+
+  <script>
+    function showSurprise() {
+      document.getElementById("surprise").style.display = "block";
+    }
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (16 + Math.random() * 22) + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }, 500);
+  </script>
+
+</body>
+</html>
